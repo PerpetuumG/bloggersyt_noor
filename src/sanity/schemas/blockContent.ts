@@ -1,8 +1,8 @@
 import {defineType, defineArrayMember} from 'sanity'
 
 /**
- * This is the schema type for block content used in the post document type
- * Importing this type into the studio configuration's `schema` property
+ * This is the schemas type for block content used in the post document type
+ * Importing this type into the studio configuration's `schemas` property
  * lets you reuse it in other document types with:
  *  {
  *    name: 'someName',
