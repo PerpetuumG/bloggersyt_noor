@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Logo from '@/components/Logo';
-import {FiMenu} from 'react-icons/fi';
+import { FiMenu } from 'react-icons/fi';
 
 const Navbar = () => {
   const navigation = [
@@ -11,17 +11,11 @@ const Navbar = () => {
   ];
 
   return (
-    <div className={'w-full bg-white/70 h-20 shadow-md'}>
-      <div
-        className={'max-w-screen-xl mx-auto flex items-center justify-between px-4 lg:px-0 h-full'}
-      >
+    <div className='w-full bg-white/70 h-20 shadow-md sticky top-0 backdrop-blur-2xl transition-colors z-50'>
+      <div className='max-w-screen-xl mx-auto flex items-center justify-between px-4 lg:px-0 h-full'>
         <Logo title={'Bloggers'} className={'text-black'} />
 
-        <div
-          className={
-            'hidden md:inline-flex items-center gap-7 text-gray-900 hover:text-block duration-200'
-          }
-        >
+        <div className='hidden md:inline-flex items-center gap-7 text-gray-900 hover:text-black duration-200'>
           {navigation.map(item => (
             <Link
               key={item?.title}
@@ -39,7 +33,7 @@ const Navbar = () => {
         </div>
 
         <div className={'md:hidden'}>
-          <FiMenu className={'text-2xl'}/>
+          <FiMenu className={'text-2xl'} />
         </div>
       </div>
     </div>
