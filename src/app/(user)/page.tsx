@@ -3,10 +3,12 @@ import { groq } from 'next-sanity';
 import { client } from '@/lib/createClient';
 import BlogContent from '@/components/BlogContent';
 
+export const revalidate = 30;
+
 const query = groq`*[_type == 'post']{
   ...,
   author->,
-    categories[]->
+  categories[]->
 } | order(_createdAt asc)`;
 
 export default async function Home() {
